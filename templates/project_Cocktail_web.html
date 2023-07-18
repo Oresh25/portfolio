@@ -3,7 +3,7 @@
 {% block content %}
 <main class="main main--project">
     <div>
-        <img class="cock hero micro" src="/static/img/cocktail_about.jpg"
+        <img class="cock hero micro" src="{{ url_for('static', filename=project['hero']) }}"
             alt="Cocktail" />
 
         <article class="project">
