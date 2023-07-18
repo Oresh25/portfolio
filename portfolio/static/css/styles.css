@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Lato, "sans-serif";
+}
+
+body {
+    margin-top: 30px;
+}
+
+.header {
+    text-align: center;
+}
+
+.nav {
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #1c2023;
+}
+
+.nav__link:not(:last-of-type) {
+    margin-right: 2.5rem;
+}
+
+.nav__link--active, 
+.nav__link:hover{
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main--about,
+.main--error {
+    flex-direction:column;
+    max-width: 500px;
+    margin:0 auto ;
+    text-align: justify; 
+    line-height: 135%;
+    font-weight: bold;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contact__details {
+    margin-left: 1ch;
+}
+
+.contact__link {
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 3px 0 0 #4cafda;
+}
+
+.contact__link:hover {
+    color: #4cafda;
+}
+
+.project-card {
+    padding: 0.75rem 0;
+}
+
+.project-card__image {
+    width: 350px;
+    height: 220px;
+    border-radius: 3%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card__meta {
+    padding: 0 1.25rem;
+}
+
+.project-card__name {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #1c2023;
+}
+
+.project-card:hover .project-card__image{
+    transform: translateY(-0.5rem);
+}
+
+.project-card:hover .project-card__name {
+    text-decoration: underline;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.25rem;
+    justify-content: center;
+    justify-items: center;
+    max-width: 21.875rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 48.75em) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 68rem;
+    }
+}
+
+.categories {
+    display: flex;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    color: #0c8ec6;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.075rem;
+}
+
+.categories__tag:not(:last-of-type)::after {
+    content: "|";
+    margin: 0 0.25rem;
+}
+
+.hero {
+    width: 800px;
+    height: 400px;
+    width: 100%;
+    display: block;
+    border-radius: 5%;
+    margin-bottom: 1rem;
+}
+
+.project {
+    display: flex;
+    max-width: 50rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.project__content {
+    margin-bottom: 1rem;
+    line-height: 150%;
+}
+
+@media (min-width:48.75em) {
+    .project {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .project__content {
+        flex: 7;
+        margin-right: 3rem;
+        padding: 0;
+    }
+}
+
+.project__heading {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+.project__heading--meta {
+    font-size: inherit;
+    margin-bottom: 1rem;
+}
+
+.project__meta-group {
+    margin-bottom: 1rem;
+}
+
+.project__meta-group,
+.cta {
+    padding: 1rem;
+    background-color: #d4eafa;
+    border-radius: 6px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #1c2023;
+    text-decoration: none;
+}
+
+.cta:hover {
+    text-decoration: underline;
+}
+
+.cta__icon {
+    margin-right: 0.5rem;
+    transform: translateY(1px);
+}
+
+.technology-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0.75rem;
+    line-height: 1.75rem;
+}
+
+.technology-list__item:before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("/static/img/list-check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5rem;
+    transform: translateY(2px);
+}
+
+.u-bare-link {
+    text-decoration: none;
+}
+
+.micro{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.cock{
+    width: 800px;
+}
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
