@@ -44,7 +44,7 @@ body {
 .main--about,
 .main--error {
     flex-direction:column;
-    max-width: 500px;
+    max-width: 510px;
     margin:0 auto ;
     text-align: justify; 
     line-height: 135%;
