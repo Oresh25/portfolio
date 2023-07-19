@@ -4,59 +4,25 @@
 {% block content %} 
 <main class="main main--home">
     <section class="projects">
-        
-            <a class="u-bare-link" href="project_REST-API.html">
+        {% for project in projects %} 
+            <a class="u-bare-link" href="{{ url_for('project', slug=project['slug']) }}">
                <article class="project-card">
                     <img class="project-card__image" 
-                        src="/static/img/REST-hero.jpg" 
-                        alt=" hero image"
+                        src="{{ url_for('static', filename=project['thumb']) }}" 
+                        alt="{{ project['name'] }} hero image"
                     />
                     <header class="project-card__meta">
                         <ul class="categories">
-                           
-                                <li class="categories__tag"></li>
-                            
+                            {% for category in project["categories"] %} 
+                                <li class="categories__tag">{{ category }}</li>
+                            {% endfor %}
                         </ul>
 
-                        <h2 class="project-card__name"></h2>
+                        <h2 class="project-card__name">{{ project['name'] }}</h2>
                     </header>
                </article> 
             </a>
-            <a class="u-bare-link" href="project_MicroBlog.html">
-                <article class="project-card">
-                     <img class="project-card__image" 
-                         src="/static/img/microblog.JPG" 
-                         alt=" hero image"
-                     />
-                     <header class="project-card__meta">
-                         <ul class="categories">
-                              
-                                 <li class="categories__tag"></li>
-                             
-                         </ul>
- 
-                         <h2 class="project-card__name"></h2>
-                     </header>
-                </article> 
-             </a>
-             <a class="u-bare-link" href="project_Cocktail_web.html">
-                <article class="project-card">
-                     <img class="project-card__image" 
-                         src="/static/img/cocktail.jpg" 
-                         alt=" hero image"
-                     />
-                     <header class="project-card__meta">
-                         <ul class="categories">
-                             
-                                 <li class="categories__tag"></li>
-                             
-                         </ul>
- 
-                         <h2 class="project-card__name"></h2>
-                     </header>
-                </article> 
-             </a>
-        
+        {% endfor %}
     </section>
 </main>
 {% endblock %}
