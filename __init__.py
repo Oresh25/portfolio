@@ -6,15 +6,15 @@ def create_app():
     projects = [
         {
             "name": "REST API",
-            "thumb": "img/REST1.JPG",
-            "hero": "img/REST-hero.JPG",
+            "thumb": "img/REST1.jpg",
+            "hero": "img/REST-hero.jpg",
             "categories": ["python", "Flask", "Docker"],
             "slug": "REST-API",
             "prod": "https://github.com/Oresh25/REST_API"
         },
         {
             "name": "MicroBlog app",
-            "thumb": "img/microblog.jpg",
+            "thumb": "img/microblog.JPG",
             "hero": "img/microblog-hero.jpeg",
             "categories": ["python", "Flask", "html", "css", "MongoDB"],
             "slug": "MicroBlog",
@@ -22,7 +22,7 @@ def create_app():
         },
         {
             "name": "Cocktail web",
-            "thumb": "img/cocktail.JPG",
+            "thumb": "img/cocktail.jpg",
             "hero": "img/cocktail_about.jpg",
             "categories": ["html", "css", "JAVASCRIPT", "PHP"],
             "slug": "Cocktail_web",
