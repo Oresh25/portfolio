@@ -7,7 +7,7 @@ def create_app():
         {
             "name": "REST API",
             "thumb": "img/REST1.JPG",
-            "hero": "img/REST-hero.JPG",
+            "hero": "REST-hero.JPG",
             "categories": ["python", "Flask", "Docker"],
             "slug": "REST-API",
             "prod": "https://github.com/Oresh25/REST_API"
