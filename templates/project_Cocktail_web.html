@@ -3,9 +3,9 @@
 {% block content %}
 <main class="main main--project">
     <div>
-        <img class="cock hero micro" src="{{ url_for('static', filename=project['hero']) }}"
-            alt="Cocktail" />
-
+        <video class="cock" autoplay controls loop>
+            <source src="/static/cocktail_clip.mp4" type="video/mp4">
+        </video>
         <article class="project">
             <article class="project__content">
                 <h2 class="project__heading">{{ project['name'] }}</h2>
