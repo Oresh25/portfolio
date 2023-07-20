@@ -224,8 +224,9 @@ body {
 .technology-list {
     list-style: none;
     margin: 0;
-    padding-left: 0.75rem;
+    padding-left: 3.4rem;
     line-height: 1.75rem;
+    text-align: left;
 }
 
 .technology-list__item:before {
